@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { ClassBindingComponent } from './class-binding/class-binding.component';
 import { StyleBindingComponent } from './style-binding/style-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { ReferenceVariableComponent } from './reference-variable/reference-variable.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 
 @NgModule({
   declarations: [
@@ -18,11 +20,13 @@ import { ReferenceVariableComponent } from './reference-variable/reference-varia
     ClassBindingComponent,
     StyleBindingComponent,
     EventBindingComponent,
-    ReferenceVariableComponent
+    ReferenceVariableComponent,
+    TwoWayBindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
