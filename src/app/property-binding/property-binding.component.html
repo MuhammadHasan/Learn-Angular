@@ -1,0 +1,11 @@
+<h3>
+  Property Binding works!
+</h3>
+
+<input [id]="id" type="text" value="code">
+
+<input id="{{id}}" type="text" value="code">
+
+<input [disabled]="isDisable" id="{{id}}" type="text" value="code">
+
+<input bind-disabled="!isDisable" id="{{id}}" type="text" value="code">
