@@ -1,0 +1,23 @@
+<h3>
+  ng-if-directive works!
+</h3>
+
+<h4 *ngIf="false">Hasan</h4>
+
+<h4 *ngIf="name">Hasan</h4>
+
+<h4 *ngIf="name; else tem1">Hasan</h4>
+
+<ng-template #tem1>
+  <h4>Not Defined</h4>
+</ng-template>
+
+<div *ngIf="name; then view1; else view2"></div>
+
+<ng-template #view1>
+  <h4>Hasan</h4>
+</ng-template>
+
+<ng-template #view2>
+  <h4>Not Defined</h4>
+</ng-template>
