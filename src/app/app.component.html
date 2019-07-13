@@ -21,7 +21,10 @@
 
   <!-- <app-ng-switch-directive></app-ng-switch-directive> -->
 
-  <app-ng-for-directive></app-ng-for-directive>
+  <!-- <app-ng-for-directive></app-ng-for-directive> -->
+
+  <app-input-output (childEvent)="message=$event" [parentData]='data'></app-input-output>
+  <h4>{{message}}</h4> 
 
 </div>
 <!-- 
