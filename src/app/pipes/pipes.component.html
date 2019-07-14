@@ -1,0 +1,37 @@
+<h3>
+  pipes works!
+</h3>
+
+<h4>{{text | lowercase}}</h4>
+<h4>{{text | uppercase}}</h4>
+
+<h4>{{message | titlecase}}</h4>
+
+<!-- start from index 4 -->
+<h4>{{text | slice: 4}}</h4> 
+
+<!-- we can also give limit with second arg. -->
+<h4>{{text | slice: 4:6 }}</h4>
+
+<h4>{{ user | json}}</h4>
+
+<h4>{{ 0.75 | percent}}</h4>
+
+<h4>{{ 0.75 | currency}}</h4>
+<!-- iso currency codes -->
+<h4>{{ 0.75 | currency: 'GBP'}}</h4>
+<h4>{{ 0.75 | currency: 'GBP': 'code'}}</h4>
+
+<h4>{{ 6.6789 | number: '1.2-3'}}</h4>
+<h4>{{ 6.6789 | number: '3.4-5'}}</h4>
+<h4>{{ 6.6789 | number: '3.1-2'}}</h4>
+
+<h4>{{date}}</h4>
+<h4>{{date | date:'short'}}</h4>
+<h4>{{date | date:'shortDate'}}</h4>
+<h4>{{date | date:'shortTime'}}</h4>
+<h4>{{date | date:'long'}}</h4>
+<h4>{{date | date:'longDate'}}</h4>
+<h4>{{date | date:'longTime'}}</h4>
+
+
