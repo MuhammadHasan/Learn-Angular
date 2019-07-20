@@ -16,6 +16,9 @@ import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-dire
 import { NgForDirectiveComponent } from './ng-for-directive/ng-for-directive.component';
 import { InputOutputComponent } from './input-output/input-output.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
+import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
+import { CourseService } from './course.service';
 
 @NgModule({
   declarations: [
@@ -31,14 +34,18 @@ import { PipesComponent } from './pipes/pipes.component';
     NgSwitchDirectiveComponent,
     NgForDirectiveComponent,
     InputOutputComponent,
-    PipesComponent
+    PipesComponent,
+    CoursesListComponent,
+    CoursesDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    CourseService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
