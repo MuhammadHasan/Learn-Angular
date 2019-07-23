@@ -13,7 +13,9 @@ export class CoursesDetailComponent implements OnInit {
   constructor(private _course: CourseService) { }
 
   ngOnInit() {
-    this.courses = this._course.getCourses();
+    this._course.getCourses().subscribe(data => {
+      this.courses = data;
+    });
   }
 
 }
