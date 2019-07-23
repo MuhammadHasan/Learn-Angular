@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { ICourse } from './Icourse';
-import { Observable } from 'rxjs';
+import { throwError as observableThrowError, Observable } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +20,16 @@ export class CourseService {
     //   { name: "maths", duration: "4 months" }
     // ]
 
-    return this.http.get<ICourse[]>(this.url);
+    return this.http
+      .get<ICourse[]>(this.url)
+      .pipe(
+        catchError(this.errorHandler)
+      )
+
+  }
+
+  errorHandler(error: HttpErrorResponse){
+    return observableThrowError(error.message || "Server Error");
   }
   
 }
