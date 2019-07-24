@@ -20,6 +20,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
 import { CourseService } from './course.service';
+import { Page404Component } from './page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CourseService } from './course.service';
     InputOutputComponent,
     PipesComponent,
     CoursesListComponent,
-    CoursesDetailComponent
+    CoursesDetailComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
