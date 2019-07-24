@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CourseService } from '../course.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-courses-detail',
@@ -13,7 +13,7 @@ export class CoursesDetailComponent implements OnInit {
   errMsg;
   courseId;
 
-  constructor(private _course: CourseService, private route: ActivatedRoute) { }
+  constructor(private _course: CourseService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit() {
     // this._course.getCourses().subscribe(data => {
@@ -22,10 +22,26 @@ export class CoursesDetailComponent implements OnInit {
     // err => this.errMsg = err
     // );
     
-    // get route params.
-    let id = this.route.snapshot.paramMap.get('id');
-    this.courseId = id;
+    // get route params. // with snapshot aproach
+    // let id = parseInt(this.route.snapshot.paramMap.get('id'));
+    // this.courseId = id;
 
+    // paramMap Obserable
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      let id = parseInt(params.get('id'));
+      this.courseId = id;
+    });
+
+  }
+
+  previous(){
+    let id = this.courseId - 1;
+    this.router.navigate(['/course', id])
+  }
+
+  next(){
+    let id = this.courseId + 1;
+    this.router.navigate(['/course', id])
   }
 
 }
