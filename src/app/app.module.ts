@@ -21,6 +21,8 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { CoursesDetailComponent } from './courses-detail/courses-detail.component';
 import { CourseService } from './course.service';
 import { Page404Component } from './page404/page404.component';
+import { CourseOverviewComponent } from './course-overview/course-overview.component';
+import { CourseTeacherComponent } from './course-teacher/course-teacher.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,9 @@ import { Page404Component } from './page404/page404.component';
     PipesComponent,
     CoursesListComponent,
     CoursesDetailComponent,
-    Page404Component
+    Page404Component,
+    CourseOverviewComponent,
+    CourseTeacherComponent
   ],
   imports: [
     BrowserModule,

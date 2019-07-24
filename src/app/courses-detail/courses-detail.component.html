@@ -10,6 +10,13 @@
 
 <h3>course of id is: {{courseId}}</h3>
 
+<div>
+  <button (click)="overview()">Overview</button>
+  <button (click)="teacher()">teachers</button>
+</div>
+
+<router-outlet></router-outlet>
+
 <a (click)="previous()">Previous</a>
 <a (click)="next()">Next</a>
 

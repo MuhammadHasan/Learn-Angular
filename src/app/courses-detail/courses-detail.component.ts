@@ -54,4 +54,12 @@ export class CoursesDetailComponent implements OnInit {
 
   }
 
+  overview(){
+    this.router.navigate(['overview'], {relativeTo: this.route});
+  }
+
+  teacher(){
+    this.router.navigate(['teacher'], {relativeTo: this.route});
+  }
+
 }
