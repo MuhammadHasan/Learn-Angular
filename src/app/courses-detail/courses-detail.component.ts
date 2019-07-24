@@ -47,9 +47,11 @@ export class CoursesDetailComponent implements OnInit {
   back(){
     let selectedId = this.courseId ? this.courseId : null;
     // optional parameter with routing
-    this.router.navigate(['/course', {
-      id: selectedId
-    }])
+    this.router.navigate(['/course', { id: selectedId }]);
+
+    // ../ means go back one segment in the url.
+    this.router.navigate(['../', {id: selectedId}], {relativeTo: this.route});
+
   }
 
 }

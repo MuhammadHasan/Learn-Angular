@@ -31,7 +31,10 @@ export class CoursesListComponent implements OnInit {
 
   onClick(course){
     // navigate with route params
-    this.router.navigate(['/course', course.id])
+    // this.router.navigate(['/course', course.id]);
+
+    // for relative navigation
+    this.router.navigate([course.id], {relativeTo: this.route });
   }
 
   isSelected(course){

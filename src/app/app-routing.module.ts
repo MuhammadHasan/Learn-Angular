@@ -5,9 +5,9 @@ import { CoursesDetailComponent } from './courses-detail/courses-detail.componen
 import { Page404Component } from './page404/page404.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/course' , pathMatch: 'full'},
-  { path: 'course', component: CoursesListComponent},
-  { path: 'course/:id', component: CoursesDetailComponent},
+  { path: '', redirectTo: '/course-list' , pathMatch: 'full'},
+  { path: 'course-list', component: CoursesListComponent},
+  { path: 'course-list/:id', component: CoursesDetailComponent},
   { path: '**', component: Page404Component }
 ];
 
