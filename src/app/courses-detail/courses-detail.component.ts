@@ -44,4 +44,12 @@ export class CoursesDetailComponent implements OnInit {
     this.router.navigate(['/course', id])
   }
 
+  back(){
+    let selectedId = this.courseId ? this.courseId : null;
+    // optional parameter with routing
+    this.router.navigate(['/course', {
+      id: selectedId
+    }])
+  }
+
 }
